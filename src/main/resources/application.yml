@@ -1,0 +1,21 @@
+server:
+  port: 18080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      force: true
+my:
+  upload-path: /uploads/  # 上传的路径,相对于/static/
+  allow-max-size: 5 * 1024 *1024 # 单文件最大多大，单位字节
+  allow-ext: jpg,peg,png,gif # 允许什么类型的文件，英文逗号分隔
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 10MB # 设置最大的最大请求大小
+      max-file-size: 10MB    # 设置单文件的最大请求大小
+      enabled: true
+  web:
+    resources:
+      static-locations: classpath:/static/,file:/static/
