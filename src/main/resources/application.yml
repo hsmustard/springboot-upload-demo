@@ -8,7 +8,7 @@ server:
 my:
   upload-path: /uploads/  # 上传的路径,相对于/static/
   allow-max-size: 5 * 1024 *1024 # 单文件最大多大，单位字节
-  allow-ext: jpg,peg,png,gif # 允许什么类型的文件，英文逗号分隔
+  allow-ext: jpg,jpeg,png,gif # 允许什么类型的文件，英文逗号分隔
 
 spring:
   servlet:

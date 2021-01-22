@@ -44,7 +44,7 @@ public class UploadUtils {
     public static Boolean check(MultipartFile file) {
         if (file == null || file.isEmpty()) return false;
         String ext = FileUtil.extName(file.getOriginalFilename());
-        return file.getSize() <= allowMaxSize && !allowExt.contains(ext);
+        return file.getSize() <= allowMaxSize && allowExt.contains(ext);
     }
 
     public static String getPath(String uploadPath) throws FileNotFoundException {
